@@ -70,6 +70,15 @@ namespace Microsoft.PowerToys.Run.Plugin.System.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Localize system commands.
+        /// </summary>
+        internal static string Localize_system_commands {
+            get {
+                return ResourceManager.GetString("Localize_system_commands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please Confirm.
         /// </summary>
         internal static string Microsoft_plugin_sys_confirmation {

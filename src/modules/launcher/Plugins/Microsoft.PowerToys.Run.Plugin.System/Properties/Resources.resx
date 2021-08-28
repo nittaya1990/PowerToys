@@ -120,6 +120,9 @@
   <data name="confirm_system_commands" xml:space="preserve">
     <value>Show a dialog to confirm system commands</value>
   </data>
+  <data name="Localize_system_commands" xml:space="preserve">
+    <value>Localize system commands</value>
+  </data>
   <data name="Microsoft_plugin_sys_confirmation" xml:space="preserve">
     <value>Please Confirm</value>
     <comment>Request confirmation</comment>
