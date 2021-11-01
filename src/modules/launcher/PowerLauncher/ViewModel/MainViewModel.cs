@@ -574,11 +574,10 @@ namespace PowerLauncher.ViewModel
                                     Results.Sort();
                                     Results.SelectedItem = Results.Results.FirstOrDefault();
                                 }
+
+                                currentCancellationToken.ThrowIfCancellationRequested();
+                                UpdateResultsListViewAfterQuery(queryText);
                             }
-
-                            currentCancellationToken.ThrowIfCancellationRequested();
-
-                            UpdateResultsListViewAfterQuery(queryText);
 
                             // Run the slower query of the DelayedExecution plugins
                             currentCancellationToken.ThrowIfCancellationRequested();
@@ -610,12 +609,11 @@ namespace PowerLauncher.ViewModel
                                                     currentCancellationToken.ThrowIfCancellationRequested();
                                                     numResults = Results.Results.Count;
                                                     Results.Sort();
-                                                    Results.SelectedItem = Results.Results.FirstOrDefault();
                                                 }
-                                            }
 
-                                            currentCancellationToken.ThrowIfCancellationRequested();
-                                            UpdateResultsListViewAfterQuery(queryText, true);
+                                                currentCancellationToken.ThrowIfCancellationRequested();
+                                                UpdateResultsListViewAfterQuery(queryText, true);
+                                            }
                                         }
                                     }
                                     catch (OperationCanceledException)
